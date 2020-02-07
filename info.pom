@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
   <name>Jsoup Flexmark</name>
-  <description>JSoup Flexmark Utilities</description>
+  <description>Jsoup Flexmark Utilities</description>
   <url>https://github.com/topobyte/jsoup-flexmark</url>
   <licenseName>GNU Lesser General Public License (LGPL), Version 3</licenseName>
   <licenseUrl>https://www.gnu.org/licenses/lgpl-3.0.txt</licenseUrl>
