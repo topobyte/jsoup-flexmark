@@ -74,7 +74,7 @@ public class Markdown
 		return HtmlRenderer.builder(options).build();
 	}
 
-	public static void generate(Element container, String markdown)
+	public static void renderMarkdown(Element container, String markdown)
 	{
 		Document document = parser().parse(markdown);
 		String html = renderer().render(document);
@@ -91,7 +91,7 @@ public class Markdown
 			throws IOException
 	{
 		String markdown = Resources.loadString(resource);
-		generate(content, markdown);
+		renderMarkdown(content, markdown);
 	}
 
 	public static void renderFile(Element content, Path file) throws IOException
@@ -99,7 +99,7 @@ public class Markdown
 		InputStream input = Files.newInputStream(file);
 		String markdown = IOUtils.toString(input, StandardCharsets.UTF_8);
 
-		generate(content, markdown);
+		renderMarkdown(content, markdown);
 	}
 
 }
