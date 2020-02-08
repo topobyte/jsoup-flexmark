@@ -18,8 +18,13 @@
 package de.topobyte.jsoup;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.Arrays;
 
+import org.apache.commons.io.IOUtils;
 import org.jsoup.nodes.Element;
 
 import com.vladsch.flexmark.Extension;
@@ -80,6 +85,14 @@ public class Markdown
 			throws IOException
 	{
 		String markdown = Resources.loadString(resource);
+		generate(content, markdown);
+	}
+
+	public static void renderFile(Element content, Path file) throws IOException
+	{
+		InputStream input = Files.newInputStream(file);
+		String markdown = IOUtils.toString(input, StandardCharsets.UTF_8);
+
 		generate(content, markdown);
 	}
 
