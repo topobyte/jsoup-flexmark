@@ -19,7 +19,7 @@ We provide access to the artifacts via our own Maven repository:
 
 The packages are available at these coordinates:
 
-    de.topobyte:jsoup-flexmark:0.0.2
+    de.topobyte:jsoup-flexmark:0.0.3
 
 You can also browse the repository online:
 
