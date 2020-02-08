@@ -81,6 +81,12 @@ public class Markdown
 		container.append(html);
 	}
 
+	public static String toHtml(String markdown)
+	{
+		Document document = parser().parse(markdown);
+		return renderer().render(document);
+	}
+
 	public static void renderResource(Element content, String resource)
 			throws IOException
 	{
