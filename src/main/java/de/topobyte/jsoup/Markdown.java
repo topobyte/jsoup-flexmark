@@ -96,10 +96,10 @@ public class Markdown
 
 	public static void renderFile(Element content, Path file) throws IOException
 	{
-		InputStream input = Files.newInputStream(file);
-		String markdown = IOUtils.toString(input, StandardCharsets.UTF_8);
-
-		renderMarkdown(content, markdown);
+		try (InputStream input = Files.newInputStream(file)) {
+			String markdown = IOUtils.toString(input, StandardCharsets.UTF_8);
+			renderMarkdown(content, markdown);
+		}
 	}
 
 }
